@@ -12,7 +12,18 @@ const newsData = [{
     { type: 'image', url: 'https://moneyinc.com/wp-content/uploads/2017/01/1200px-Mark_Zuckerberg_F8_2018_Keynote_41793468502.jpg' },
     { type: 'image', url: 'https://i.tribune.com.pk/media/images/846928-billgatesAFP-1425346144/846928-billgatesAFP-1425346144.jpg' },
   ],
-  news: [{ lang: 'en', title: 'This is a breaking news Title', description: 'This is a breaking news Description' }],
+  news: [
+    {
+      lang: 'en',
+      title: 'This is a breaking news Title',
+      description: 'This is a breaking news Description, This is a breaking news Description, This is a breaking news Description, This is a breaking news Description. This is a breaking news Description.'
+    },
+    {
+      lang: 'kn',
+      title: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ಶೀರ್ಷಿಕೆ',
+      description: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ. ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ.'
+    }
+  ],
   reference: {
     reference_url: 'https://www.google.com'
   }
@@ -21,7 +32,7 @@ const HomeScreen = () => {
   const news = newsData[0];
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
-      <PageRenderer news={news.news[0]} gallery={news.gallery} reference={news.reference} />
+      <PageRenderer news={news.news[1]} gallery={news.gallery} reference={news.reference} />
     </SafeAreaView>
   )
 }

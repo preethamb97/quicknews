@@ -1,14 +1,14 @@
-import { Dimensions, Image, StyleSheet, View } from 'react-native'
+import { Dimensions, Image, ImageBackground, StyleSheet } from 'react-native'
 import React from 'react'
-import tw from 'tailwind-react-native-classnames';
 const { width } = Dimensions.get('window');
+
 const CarouselItem = ({ item }) => {
   return (
-    <View style={styles.cardView}>
-      <Image style={[tw`rounded-xl`, styles.image]}
+    <ImageBackground source={{ url: item.url }} style={[styles.cardView]} blurRadius={20}>
+      <Image style={styles.image}
         source={{ url: item.url }}
       />
-    </View>
+    </ImageBackground>
   )
 }
 
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    resizeMode: 'cover',
-    width: width
+    resizeMode: 'contain',
+    width: width,
   }
 })
