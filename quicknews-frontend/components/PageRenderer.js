@@ -1,10 +1,11 @@
-import { FlatList, Text, View } from 'react-native'
+import { FlatList, Linking, Text, View } from 'react-native'
 import React from 'react'
 import CarouselItem from './CarouselItem';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const PageRenderer = ({ news, gallery }) => {
+const PageRenderer = ({ news, gallery, reference }) => {
+  const referenceUrl = reference.reference_url ? reference.reference_url : undefined;
   return (
     <View style={tw`bg-white w-full`}>
       <View style={[tw`h-1/3 w-full`]}>
@@ -36,11 +37,25 @@ const PageRenderer = ({ news, gallery }) => {
         >
           {news.title}
         </Text>
+
         <Text
           style={tw`text-lg mt-1 font-extralight tracking-normal leading-7`}
         >
           {news.description}
         </Text>
+
+        {referenceUrl ? (
+          <View>
+            <Text onPress={() => {
+              Linking.openURL(referenceUrl)
+            }}
+              style={{
+                position: 'absolute',
+                top: 6,
+                color: '#8ab4f8'
+              }}>{referenceUrl.replace('https://', '').replace('http://', '')}</Text>
+          </View>
+        ) : ''}
       </View>
     </View>
   )
