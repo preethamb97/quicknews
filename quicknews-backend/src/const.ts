@@ -1,0 +1,12 @@
+export const ENV_VARS = {
+    JWT: {
+      ACCESS_TOKEN_SECRET: 'JWT_ACCESS_TOKEN_SECRET',
+      ACCESS_TOKEN_EXPIRY: 'JWT_ACCESS_TOKEN_EXPIRY',
+    },
+  };
+  
+  export const GLOBAL_CONSTANTS = {
+    CONTENT_ACTIVE: 1,
+    CONTENT_INACTIVE: 2,
+    CONTENT_DELETED: 3,
+  };

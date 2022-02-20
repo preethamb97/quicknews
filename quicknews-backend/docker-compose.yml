@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  quicknews-app:
+    container_name: quicknews-app
+    restart: always
+    build: .
+    ports:
+      - 4005:3000
+    environment:
+      - DB_TYPE=
+      - DB_USERNAME=
+      - DB_PASSWORD=
+      - DB_HOST=
+      - DB_NAME=
+      - DB_LOGGING=
+      - DB_PORT=
+
+volumes:
+  dbdata:

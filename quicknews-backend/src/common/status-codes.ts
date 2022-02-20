@@ -1,0 +1,140 @@
+export const ERROR_CODES = {
+  REGISTER: {
+    MOBILE_NUMBER_ALREADY_REGISTERED: {
+      CODE: 'REG_E0001',
+      DESCRIPTION: 'Mobile number already Registered'
+    },
+    WRONG_OTP: {
+      CODE: 'REG_E0002',
+      DESCRIPTION: 'Wrong OTP'
+    },
+    INVALID_REQUESTID: {
+      CODE: 'REG_E0003',
+      DESCRIPTION: 'Invalid requestId'
+    },
+    ACCOUNT_BLOCKED: {
+      CODE: 'REG_E0004',
+      DESCRIPTION: 'Account blocked'
+    },
+  },
+  LOGIN: {
+    MOBILE_NUMBER_NOT_REGISTERED: {
+      CODE: 'LGN_E0001',
+      DESCRIPTION: 'Mobile not Registered'
+    },
+    INVALID_CREDENTIALS: {
+      CODE: 'LGN_E0002',
+      DESCRIPTION: 'Invalid credentials'
+    },
+    MAX_DEVICE_LIMIT_REACHED: {
+      CODE: 'LGN_E0003',
+      DESCRIPTION: 'Maximum Device Limit Reached, Relogin Again'
+    }
+  },
+  RESETPASS: {
+    MOBILE_NUMER_NOT_REGISTERED: {
+      CODE: 'RSTPASS_E0001',
+      DESCRIPTION: 'Mobile number not Registered'
+    },
+    INVALID_REQUESTID: {
+      CODE: 'RSTPASS_E0002',
+      DESCRIPTION: 'Invalid requestId'
+    },
+    WRONG_OTP: {
+      CODE: 'RSTPASS_E0003',
+      DESCRIPTION: 'Wrong OTP'
+    },
+    INVALID_SESSIONID: {
+      CODE: 'RSTPASS_E0004',
+      DESCRIPTION: 'Invalid sessionId'
+    }
+  },
+  STANDARD: {
+    INVALID_TOKEN: {
+      CODE: 'STANDARD_E0001',
+      DESCRIPTION: 'Invalid Token'
+    },
+    TOKEN_EXPIRED: {
+      CODE: 'STANDARD_E0002',
+      DESCRIPTION: 'Token expired'
+    },
+    INTERNAL_SERVER_ERROR: {
+      CODE: 'STANDARD_E0003',
+      DESCRIPTION: 'Internal server error'
+    },
+    USER_NOT_FOUND: {
+      CODE: 'STANDARD_E0004',
+      DESCRIPTION: 'User not found'
+    },
+    UNAUTHORIZED: {
+      CODE: 'STANDARD_E0005',
+      DESCRIPTION: 'Unauthorized'
+    },
+    RECENTLY_DELETED_USER: {
+      CODE: 'STANDARD_E0006',
+      DESCRIPTION: 'Recently deleted user'
+    }
+  },
+  CHANGE_PASSWORD: {
+    WRONG_PASSWORD: {
+      CODE: 'CHNGPASS_E0001',
+      DESCRIPTION: ' Wrong current password '
+    }
+  },
+  CATEGORY: {
+    CATEGORY_TYPE_DOESNT_EXISTS: {
+      CODE: 'CAT_E0001',
+      DESCRIPTION: 'Category Type Doesnt Exists'
+    },
+  },
+};
+
+export const VALIDATION_ERROR_CODES = {
+  PHONE_NUMER: {
+    REQUIRED: 'ERR_FIELD_PHONE_NUMER_REQUIRED',
+    INVALID_FORMAT: 'ERR_FIELD_PHONE_NUMER_INVALID_FORMAT'
+  },
+  MOBILE_NUMBER: {
+    REQUIRED: 'ERR_FIELD_MOBILE_NUMBER_REQUIRED',
+    INVALID_FORMAT: 'ERR_FIELD_MOBILE_NUMBER_INVALID_FORMAT'
+  },
+  PASSWORD: {
+    REQUIRED: 'ERR_FIELD_PASSWORD_REQUIRED',
+    INVALID_FORMAT: 'ERR_FIELD_PASSWORD_INVALID_FORMAT'
+  },
+  OTP: {
+    REQUIRED: 'ERR_FIELD_OTP_REQUIRED'
+  },
+  DEVICEID: {
+    REQUIRED: 'ERR_FIELD_DEVICEID_REQUIRED'
+  },
+  REQUESTID: {
+    REQUIRED: 'ERR_FIELD_REQUESTID_REQUIRED'
+  },
+  CURRENT_PASSWORD: {
+    REQUIRED: 'ERR_FIELD_CURRENT_PASSWORD_REQUIRED'
+  },
+  NEW_PASSWORD: {
+    REQUIRED: 'ERR_FIELD_NEW_PASSWORD_REQUIRED',
+    INVALID_FORMAT: 'ERR_FIELD_NEW_PASSWORD_INVALID_FORMAT'
+  },
+  REFRESH_TOKEN: {
+    REQUIRED: 'ERR_FIELD_REFRESH_TOKEN_REQUIRED'
+  },
+  LIMIT: {
+    REQUIRED: 'ERR_FIELD_LIMIT_REQUIRED',
+    TYPE: 'ERR_FIELD_LIMIT_TYPE_NUMBER'
+  },
+  FLAT_ID: {
+    REQUIRED: 'ERR_FIELD_FLAT_ID_REQUIRED',
+    TYPE: 'ERR_FIELD_FLAT_ID_TYPE_NUMBER'
+  },
+  NAME: {
+    REQUIRED: 'ERR_FIELD_NAME_REQUIRED',
+    TYPE: 'ERR_FIELD_NAME_TYPE_NUMBER'
+  },
+  FIELD_IS_REQUIRED: {
+    REQUIRED: 'FIELD_IS_REQUIRED',
+    TYPE: 'FIELD_IS_REQUIRED'
+  },
+}
