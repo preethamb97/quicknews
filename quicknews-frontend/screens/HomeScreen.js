@@ -1,5 +1,5 @@
 import { SafeAreaView, Animated, PanResponder, ScrollView, View, Dimensions, FlatList } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import tw from 'tailwind-react-native-classnames';
 import PageRenderer from '../components/PageRenderer';
 
@@ -157,25 +157,52 @@ const newsData = [
   }
 ]
 const HomeScreen = () => {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [pageCurrent, setPageCurrent] = useState(1);
+
+  useEffect(() => {
+    setIsLoading(true);
+    getData()
+    return () => {
+
+    }
+  }, [pageCurrent]);
+  const getData = async () => {
+    // const apiURL = 'https://jsonplaceholder.typicode.com/todos/' + pageCurrent;
+    // fetch(apiURL).then((res) => res.json())
+    // .then((resJson) => {
+    // setData(resJson);
+    setData(data.concat(newsData));
+    setIsLoading(false);
+    // });
+  }
+
+  const handleLoadMore = () => {
+    console.log(pageCurrent)
+    setPageCurrent(pageCurrent + 1);
+    setIsLoading(true);
+  }
+
+  const renderItem = ({ item }) => (
+    <PageRenderer news={item.news[0]} gallery={item.gallery} reference={item.reference} id={item.id} />
+  )
 
   return (
     <SafeAreaView style={[tw`bg-white h-full w-full`]}>
       <FlatList
-        data={newsData}
-        renderItem={({ item }) => {
-          return <PageRenderer news={item.news[0]} gallery={item.gallery} reference={item.reference} id={item.id} />
-        }}
+        data={data}
+        renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}
         showsVerticalScrollIndicator={false}
         pagingEnabled
         scrollEnabled
-        onEndReached={() => {
-          return newsData;
-        }}
         scrollEventThrottle={20}
         snapToInterval={height}
         snapToAlignment={'start'}
         decelerationRate={'fast'}
+        onEndReached={handleLoadMore}
+        onEndReachedThreshold={0}
       />
 
     </SafeAreaView>
