@@ -4,9 +4,9 @@ import CarouselItem from './CarouselItem';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const PageRenderer = ({ id, news, gallery, reference }) => {
+const PageRenderer = ({ id, news, gallery, reference_url }) => {
   const screenHeight = Dimensions.get('window').height;
-  const referenceUrl = reference.reference_url ? reference.reference_url : undefined;
+  const referenceUrl = reference_url ? reference_url : undefined;
   return (
     <View style={[tw`bg-white w-full`, { flex: 1, height: screenHeight }]}>
       <View style={[tw`h-1/3 w-full`]}>
