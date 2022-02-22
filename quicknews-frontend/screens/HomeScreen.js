@@ -34,130 +34,6 @@ const newsData = [
     reference: {
       reference_url: 'https://www.google.com'
     }
-  },
-  {
-    id: 2,
-    gallery: [
-      { type: 'image', url: 'https://avatars.githubusercontent.com/u/31663960?v=4' },
-      { type: 'image', url: 'https://wallpaperaccess.com/full/1123635.jpg' },
-      { type: 'video', url: 'https://wallpaperaccess.com/thumb/1107012.jpg' },
-      { type: 'image', url: 'https://moneyinc.com/wp-content/uploads/2017/01/1200px-Mark_Zuckerberg_F8_2018_Keynote_41793468502.jpg' },
-      { type: 'image', url: 'https://i.tribune.com.pk/media/images/846928-billgatesAFP-1425346144/846928-billgatesAFP-1425346144.jpg' },
-    ],
-    news: [
-      {
-        lang: 'en',
-        title: 'This is a breaking news Title 2',
-        description: 'This is a breaking news Description1, This is a breaking news Description, This is a breaking news Description, This is a breaking news Description. This is a breaking news Description.'
-      },
-      {
-        lang: 'kn',
-        title: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ಶೀರ್ಷಿಕೆ 1',
-        description: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ 1, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ. ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ.'
-      }
-    ],
-    reference: {
-      reference_url: 'https://www.duckduckgo.com'
-    }
-  },
-  {
-    id: 3,
-    gallery: [
-      { type: 'image', url: 'https://avatars.githubusercontent.com/u/31663960?v=4' },
-      { type: 'image', url: 'https://wallpaperaccess.com/full/1123635.jpg' },
-      { type: 'video', url: 'https://wallpaperaccess.com/thumb/1107012.jpg' },
-      { type: 'image', url: 'https://moneyinc.com/wp-content/uploads/2017/01/1200px-Mark_Zuckerberg_F8_2018_Keynote_41793468502.jpg' },
-      { type: 'image', url: 'https://i.tribune.com.pk/media/images/846928-billgatesAFP-1425346144/846928-billgatesAFP-1425346144.jpg' },
-    ],
-    news: [
-      {
-        lang: 'en',
-        title: 'This is a breaking news Title 3',
-        description: 'This is a breaking news Description1, This is a breaking news Description, This is a breaking news Description, This is a breaking news Description. This is a breaking news Description.'
-      },
-      {
-        lang: 'kn',
-        title: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ಶೀರ್ಷಿಕೆ 1',
-        description: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ 1, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ. ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ.'
-      }
-    ],
-    reference: {
-      reference_url: 'https://www.duckduckgo.com'
-    }
-  },
-  {
-    id: 4,
-    gallery: [
-      { type: 'image', url: 'https://avatars.githubusercontent.com/u/31663960?v=4' },
-      { type: 'image', url: 'https://wallpaperaccess.com/full/1123635.jpg' },
-      { type: 'video', url: 'https://wallpaperaccess.com/thumb/1107012.jpg' },
-      { type: 'image', url: 'https://moneyinc.com/wp-content/uploads/2017/01/1200px-Mark_Zuckerberg_F8_2018_Keynote_41793468502.jpg' },
-      { type: 'image', url: 'https://i.tribune.com.pk/media/images/846928-billgatesAFP-1425346144/846928-billgatesAFP-1425346144.jpg' },
-    ],
-    news: [
-      {
-        lang: 'en',
-        title: 'This is a breaking news Title 4',
-        description: 'This is a breaking news Description1, This is a breaking news Description, This is a breaking news Description, This is a breaking news Description. This is a breaking news Description.'
-      },
-      {
-        lang: 'kn',
-        title: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ಶೀರ್ಷಿಕೆ 1',
-        description: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ 1, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ. ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ.'
-      }
-    ],
-    reference: {
-      reference_url: 'https://www.duckduckgo.com'
-    }
-  }, {
-    id: 5,
-    gallery: [
-      { type: 'image', url: 'https://avatars.githubusercontent.com/u/31663960?v=4' },
-      { type: 'image', url: 'https://wallpaperaccess.com/full/1123635.jpg' },
-      { type: 'video', url: 'https://wallpaperaccess.com/thumb/1107012.jpg' },
-      { type: 'image', url: 'https://moneyinc.com/wp-content/uploads/2017/01/1200px-Mark_Zuckerberg_F8_2018_Keynote_41793468502.jpg' },
-      { type: 'image', url: 'https://i.tribune.com.pk/media/images/846928-billgatesAFP-1425346144/846928-billgatesAFP-1425346144.jpg' },
-    ],
-    news: [
-      {
-        lang: 'en',
-        title: 'This is a breaking news Title 5',
-        description: 'This is a breaking news Description1, This is a breaking news Description, This is a breaking news Description, This is a breaking news Description. This is a breaking news Description.'
-      },
-      {
-        lang: 'kn',
-        title: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ಶೀರ್ಷಿಕೆ 1',
-        description: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ 1, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ. ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ.'
-      }
-    ],
-    reference: {
-      reference_url: 'https://www.duckduckgo.com'
-    }
-  },
-  {
-    id: 6,
-    gallery: [
-      { type: 'image', url: 'https://avatars.githubusercontent.com/u/31663960?v=4' },
-      { type: 'image', url: 'https://wallpaperaccess.com/full/1123635.jpg' },
-      { type: 'video', url: 'https://wallpaperaccess.com/thumb/1107012.jpg' },
-      { type: 'image', url: 'https://moneyinc.com/wp-content/uploads/2017/01/1200px-Mark_Zuckerberg_F8_2018_Keynote_41793468502.jpg' },
-      { type: 'image', url: 'https://i.tribune.com.pk/media/images/846928-billgatesAFP-1425346144/846928-billgatesAFP-1425346144.jpg' },
-    ],
-    news: [
-      {
-        lang: 'en',
-        title: 'This is a breaking news Title 6',
-        description: 'This is a breaking news Description1, This is a breaking news Description, This is a breaking news Description, This is a breaking news Description. This is a breaking news Description.'
-      },
-      {
-        lang: 'kn',
-        title: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ಶೀರ್ಷಿಕೆ 1',
-        description: 'ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ 1, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ, ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ. ಇದು ಬ್ರೇಕಿಂಗ್ ನ್ಯೂಸ್ ವಿವರಣೆ.'
-      }
-    ],
-    reference: {
-      reference_url: 'https://www.duckduckgo.com'
-    }
   }
 ]
 const HomeScreen = () => {
@@ -173,9 +49,11 @@ const HomeScreen = () => {
     }
   }, [pageCurrent]);
   const getData = async () => {
-    const apiURL = urlBuilder(pageCurrent, 5);
+    const apiURL = urlBuilder(10, 5);
+    console.log(apiURL)
     fetch(apiURL).then((res) => res.json())
       .then((resJson) => {
+        console.log(resJson)
         setData(resJson);
         setIsLoading(false);
       });

@@ -24,7 +24,7 @@ export class News {
   @Column({ default: '' })
   nd_hi: string;
 
-  @Column({ default: '[]'})
+  @Column({ default: '[]', length: 4000})
   gallery: string;
 
   @Column({ default: ''})
