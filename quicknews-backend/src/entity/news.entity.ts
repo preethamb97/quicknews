@@ -24,6 +24,12 @@ export class News {
   @Column({ default: '' })
   nd_hi: string;
 
+  @Column({ default: '[]'})
+  gallery: string;
+
+  @Column({ default: ''})
+  reference_url: string;
+
   @Column({ default: GLOBAL_CONSTANTS.CONTENT_ACTIVE })
   status: number;
 }

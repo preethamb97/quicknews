@@ -2,9 +2,13 @@ import { SafeAreaView, Animated, PanResponder, ScrollView, View, Dimensions, Fla
 import React, { useEffect, useState } from 'react'
 import tw from 'tailwind-react-native-classnames';
 import PageRenderer from '../components/PageRenderer';
+import { NEWS_API_ENDPOINT, ROUTE_NEWS_GETLIST } from '../const';
 
 const { width, height } = Dimensions.get("window");
 
+const urlBuilder = (offset, limit) => {
+  return `${NEWS_API_ENDPOINT}${ROUTE_NEWS_GETLIST}?offset=${offset}&limit=${limit}`;
+}
 const newsData = [
   {
     id: 1,
@@ -169,13 +173,12 @@ const HomeScreen = () => {
     }
   }, [pageCurrent]);
   const getData = async () => {
-    // const apiURL = 'https://jsonplaceholder.typicode.com/todos/' + pageCurrent;
-    // fetch(apiURL).then((res) => res.json())
-    // .then((resJson) => {
-    // setData(resJson);
-    setData(data.concat(newsData));
-    setIsLoading(false);
-    // });
+    const apiURL = urlBuilder(pageCurrent, 5);
+    fetch(apiURL).then((res) => res.json())
+      .then((resJson) => {
+        setData(resJson);
+        setIsLoading(false);
+      });
   }
 
   const handleLoadMore = () => {

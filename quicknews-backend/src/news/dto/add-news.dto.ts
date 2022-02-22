@@ -10,4 +10,12 @@ export class AddNewsDto {
   @ApiProperty()
   @IsNotEmpty({ message: `nd_en ${VALIDATION_ERROR_CODES.FIELD_IS_REQUIRED.REQUIRED}` })
   nd_en: string;
+
+  @ApiProperty()
+  @IsNotEmpty({ message: `gallery ${VALIDATION_ERROR_CODES.FIELD_IS_REQUIRED.REQUIRED}` })
+  gallery: any;
+
+  @ApiProperty()
+  @IsNotEmpty({ message: `reference_url ${VALIDATION_ERROR_CODES.FIELD_IS_REQUIRED.REQUIRED}` })
+  reference_url: string;
 }

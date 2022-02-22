@@ -5,6 +5,7 @@ import { News } from 'src/entity/news.entity';
 import { LessThan, Repository } from 'typeorm';
 import { AddNewsDto } from './dto/add-news.dto';
 import { NewsListDto } from './dto/news-list.dto';
+import { NewsTranslationResponseDto } from './dto/newsTranslationResponse.dto';
 
 @Injectable()
 export class NewsService {
@@ -71,7 +72,7 @@ export class NewsService {
       const newsList = await this.findAllNews(searchFilter);
       return {
         news_list: newsList.map(news => {
-          return { ...news };
+          return new NewsTranslationResponseDto(news);
         })
       };
     } catch (error) {
@@ -89,6 +90,8 @@ export class NewsService {
       const newNews = await this.createNewNews({
         nt_en: data.nt_en,
         nd_en: data.nd_en,
+        gallery: data.gallery ? JSON.stringify(data.gallery) : [],
+        reference_url: data.reference_url
       });
       return {
         news: { ...newNews }

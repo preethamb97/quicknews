@@ -32,7 +32,7 @@ export class NewsController {
   @ApiOperation({
     summary: "Add News"
   })
-  @Post(ENDPOINT_ROUTES.NEWS.ROUTES.GET_LIST)
+  @Post(ENDPOINT_ROUTES.NEWS.ROUTES.ADD_NEWS)
   async addNewsController(
     @Body() addNewsDto: AddNewsDto,
     @Res() response: Response
