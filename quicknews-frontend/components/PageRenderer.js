@@ -1,13 +1,14 @@
-import { FlatList, Linking, Text, View } from 'react-native'
+import { FlatList, Linking, Text, View, Dimensions } from 'react-native'
 import React from 'react'
 import CarouselItem from './CarouselItem';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const PageRenderer = ({ id, news, gallery, reference }) => {
+  const screenHeight = Dimensions.get('window').height;
   const referenceUrl = reference.reference_url ? reference.reference_url : undefined;
   return (
-    <View style={tw`bg-white w-full`}>
+    <View style={[tw`bg-white w-full`, { flex: 1, height: screenHeight }]}>
       <View style={[tw`h-1/3 w-full`]}>
         <Icon name='ellipsis1' size={25} color='white' style={{
           position: 'absolute',
