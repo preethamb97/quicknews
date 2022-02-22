@@ -4,7 +4,7 @@ import CarouselItem from './CarouselItem';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const PageRenderer = ({ news, gallery, reference }) => {
+const PageRenderer = ({ id, news, gallery, reference }) => {
   const referenceUrl = reference.reference_url ? reference.reference_url : undefined;
   return (
     <View style={tw`bg-white w-full`}>
