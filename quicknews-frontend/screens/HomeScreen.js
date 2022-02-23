@@ -13,8 +13,9 @@ const urlBuilder = (offset, limit) => {
 const HomeScreen = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [pageCurrent, setPageCurrent] = useState(1);
-
+  const [pageCurrent, setPageCurrent] = useState(0);
+  const [newsId, setNewsId] = useState(0);
+  const limit = 1;
   useEffect(() => {
     setIsLoading(true);
     getData()
@@ -23,18 +24,20 @@ const HomeScreen = () => {
     }
   }, [pageCurrent]);
   const getData = async () => {
-    const apiURL = urlBuilder(pageCurrent, 5);
+    const apiURL = urlBuilder(pageCurrent, limit);
     console.log(apiURL)
     fetch(apiURL).then((res) => res.json())
       .then((resJson) => {
-        setData(data.concat(resJson.news_list));
-        setIsLoading(false);
+        if (resJson.news_list.length > 0) {
+          setNewsId(resJson.news_list[limit - 1]['id']);
+          setData(data.concat(resJson.news_list));
+          setIsLoading(false);
+        }
       });
   }
 
   const handleLoadMore = () => {
-    console.log(pageCurrent)
-    setPageCurrent(pageCurrent + 1);
+    setPageCurrent(newsId);
     setIsLoading(true);
   }
 
