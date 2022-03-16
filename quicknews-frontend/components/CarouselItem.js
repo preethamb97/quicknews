@@ -14,7 +14,7 @@ const CarouselItem = ({ item }) => {
             />
           </ImageBackground>
           :
-          <VideoPlayer videoId={item.videoId} />
+          <VideoPlayer videoId={item.url} />
       }
 
     </View>
