@@ -1,11 +1,15 @@
 import { Text, View } from 'react-native'
 import React from 'react'
+import YoutubePlayer from 'react-native-youtube-iframe';
 
-const VideoPlayer = ({ url }) => {
+const VideoPlayer = ({ videoId }) => {
   return (
-    <View>
-      <Text>Video Url: {url}</Text>
-    </View>
+    <YoutubePlayer
+      height={300}
+      width={300}
+      play={false}
+      videoId={videoId}
+    />
   )
 }
 

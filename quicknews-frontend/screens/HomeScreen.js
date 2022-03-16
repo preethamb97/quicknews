@@ -1,10 +1,10 @@
-import { SafeAreaView, Animated, PanResponder, ScrollView, View, Dimensions, FlatList } from 'react-native'
+import { SafeAreaView, Dimensions, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import tw from 'tailwind-react-native-classnames';
 import PageRenderer from '../components/PageRenderer';
-import { NEWS_API_ENDPOINT, ROUTE_NEWS_GETLIST } from '../const';
-
-const { width, height } = Dimensions.get("window");
+import { ROUTE_NEWS_GETLIST } from '../const';
+import { NEWS_API_ENDPOINT } from '@env';
+const { height } = Dimensions.get("window");
 
 const urlBuilder = (offset, limit) => {
   return `${NEWS_API_ENDPOINT}${ROUTE_NEWS_GETLIST}?offset=${offset}&limit=${limit}`;
@@ -31,6 +31,7 @@ const HomeScreen = () => {
         if (resJson.news_list.length > 0) {
           setNewsId(resJson.news_list[limit - 1]['id']);
           setData(data.concat(resJson.news_list));
+          console.log(resJson.news_list)
           setIsLoading(false);
         }
       });

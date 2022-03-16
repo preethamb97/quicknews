@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import { Provider } from 'react-redux';
 import { store } from './store';

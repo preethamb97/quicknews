@@ -1,14 +1,24 @@
-import { Dimensions, Image, ImageBackground, StyleSheet } from 'react-native'
+import { Dimensions, Image, ImageBackground, StyleSheet, View } from 'react-native'
 import React from 'react'
+import VideoPlayer from './VideoPlayer';
 const { width } = Dimensions.get('window');
 
 const CarouselItem = ({ item }) => {
   return (
-    <ImageBackground source={{ url: item.url }} style={[styles.cardView]} blurRadius={20}>
-      <Image style={styles.image}
-        source={{ url: item.url }}
-      />
-    </ImageBackground>
+    <View>
+      {
+        item.type !== 'video' ?
+          <ImageBackground source={{ url: item.url }} style={[styles.cardView]} blurRadius={20}>
+            <Image style={styles.image}
+              source={{ url: item.url }}
+            />
+          </ImageBackground>
+          :
+          <VideoPlayer videoId={item.videoId} />
+      }
+
+    </View>
+
   )
 }
 
